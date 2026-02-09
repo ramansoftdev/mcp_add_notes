@@ -66,6 +66,27 @@ The server will start and be available at:
 - **Health Check**: http://localhost:8000/health
 - **API Docs**: http://localhost:8000/docs
 
+### Using with Claude Code
+
+This server is configured as an MCP server in Claude Code at `~/.claude/mcp_servers.json`:
+
+```json
+{
+  "notes-server": {
+    "type": "sse",
+    "url": "http://localhost:8000/mcp"
+  }
+}
+```
+
+**To use:**
+1. Start the server: `uvicorn main:app --reload`
+2. Restart Claude Code or reload MCP servers
+3. The `write_to_file` tool will be available in Claude Code
+
+**Available MCP Tool:**
+- `write_to_file(file_name, file_content)` - Write notes to files in the configured notes directory
+
 ### API Endpoints
 
 #### Health Check

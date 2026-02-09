@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "notes-server": {
+      "type": "http",
+      "url": "http://localhost:8000/mcp/",
+      "metadata": {
+        "description": "Local FastAPI MCP server for adding notes"
+      }
+    }
+  }
+}
